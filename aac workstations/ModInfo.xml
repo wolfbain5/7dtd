@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
 	<ModInfo>
-		<Name value="stacks" />
-		<Description value="increases stack sizes" />
+		<Name value="aac workstations" />
+		<Description value="allows for the upgrading of broken workstations into working ones" />
 		<Author value="wolfbain5" />
 		<Version value="1.0.0" />
 	</ModInfo>
