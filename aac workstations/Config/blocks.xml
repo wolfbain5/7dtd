@@ -3,8 +3,8 @@
 <append xpath="/blocks/block[@name='cntCollapsedWorkbench']">
    <property class="UpgradeBlock">
         <property name="ToBlock" value="workbench"/>
-        <property name="Item" value="resourceRepairKit"/>
-        <property name="ItemCount" value="2"/>
+        <property name="Item" value="resourceForgedIron"/>
+        <property name="ItemCount" value="8"/>
         <property name="UpgradeHitCount" value="4"/>
     </property>
 </append>
@@ -12,8 +12,8 @@
 <append xpath="/blocks/block[@name='cntCollapsedCementMixer']">
    <property class="UpgradeBlock">
         <property name="ToBlock" value="cementMixer"/>
-        <property name="Item" value="resourceRepairKit"/>
-        <property name="ItemCount" value="2"/>
+        <property name="Item" value="resourceForgedIron"/>
+        <property name="ItemCount" value="8"/>
         <property name="UpgradeHitCount" value="4"/>
     </property>
 </append>
@@ -21,8 +21,8 @@
 <append xpath="/blocks/block[@name='cntCollapsedChemistryStation']">
    <property class="UpgradeBlock">
         <property name="ToBlock" value="chemistryStation"/>
-        <property name="Item" value="resourceRepairKit"/>
-        <property name="ItemCount" value="2"/>
+        <property name="Item" value="resourceForgedIron"/>
+        <property name="ItemCount" value="8"/>
         <property name="UpgradeHitCount" value="4"/>
     </property>
 </append>
@@ -30,7 +30,7 @@
 <append xpath="/blocks/block[@name='cntCollapsedForge']">
    <property class="UpgradeBlock">
         <property name="ToBlock" value="forge"/>
-        <property name="Item" value="resourceRepairKit"/>
+        <property name="Item" value="resourceForgedIron"/>
         <property name="ItemCount" value="2"/>
         <property name="UpgradeHitCount" value="4"/>
     </property>
