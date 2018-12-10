@@ -1,0 +1,37 @@
+<config>
+	<append xpath="/items">
+		<item name="tabiBoots">
+			<property name="CustomIcon" value="tabi" />
+			<property name="TintColor" value="404040"/>
+			<property name="Tags" value="lowerbody,feet,clothing"/>
+			<property name="DisplayType" value="clothing"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="Weight" value="15"/>
+			<property name="FuelValue" value="3"/>
+			<property name="EconomicValue" value="60"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="EquipSlot" value="Feet"/>
+			<property class="UMA">
+				<property name="Mesh" value="worn_boots"/>
+				<property name="Overlay0" value="worn_boots"/>
+				<property name="Layer" value="0"/>
+				<property name="UISlot" value="Footwear"/>
+			</property>
+			<property name="Group" value="Clothing"/>
+			<property name="ActionSkillGroup" value="Clothing/Armor"/>
+			<property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="3"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="2"/>
+				<passive_effect name="PerkLevel" tags="perkNinjaMovement" operation="base_add" value="1"/>
+			</effect_group>
+		</item>
+		
+	</append>
+
+</config>
