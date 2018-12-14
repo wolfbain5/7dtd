@@ -1,0 +1,89 @@
+<item name="spearWooden">
+	<property name="Tags" value="knife,melee,medium,perkDeepCuts"/>
+	<property name="Meshfile" value="#@modfolder:Resources/Spears.unity3d?WoodSpearPrefab" />
+	<property name="Material" value="Mwood"/>"
+	<property name="RepairTools" value="resourceWood"/>
+	<property name="DisplayType" value="melee"/>	
+	<property name="HoldType" value="18"/>
+	<property name="DegradationBreaksAfter" value="false"/>	
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="FuelValue" value="75"/>
+	<property name="EconomicValue" value="50"/>	
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sphere" value="0.15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+		<property name="Sound_start" value="SlowSwoosh"/>
+		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+	</property>	
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sphere" value="0.15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+		<property name="Sound_start" value="swoosh"/>
+		<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
+	</property>	
+	<effect_group name="Base Effects">
+		<passive_effect name="MaxRange" operation="base_set" value="2.9"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="17"/> <!-- meleeClubIron -->
+		<passive_effect name="BlockDamage" operation="base_set" value="5"/>
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="52"/> <!-- A16 1.15 -->
+		<passive_effect name="StaminaLoss" operation="base_set" value="15" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="200,500" tier="1,6"/>
+		<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_subtract" value="0" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_add" value="22.5" tags="secondary"/>
+		
+		<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" target="self" sound="player1painlg">
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="70"/>
+			<requirement name="IsMale" target="self"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" target="self" sound="player2painlg">
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="70"/>
+			<requirement name="IsMale" target="self" invert="true"/>
+		</triggered_effect>
+</item>
+
+<item name="spearSteel">
+	<property name="Meshfile" value="#Spears?SteelSpearPrefab"/>
+	<property name="Material" value="metal"/>
+	<property name="RepairTools" value="forgedSteel"/>
+	<property name="HoldType" value="18"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="FuelValue" value="30"/>
+	<property name="EconomicValue" value="200"/>
+	<property class="Action0"> <!-- AttackAction -->
+		<property name="Class" value="Melee"/>
+		<property name="Delay" value="1.33"/>
+		<property name="Range" value="2.6"/>
+		<property name="Sphere" value="0.2"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Stamina_usage" value="12"/>
+		<property name="DamageBonus.glass" value="0.5"/>
+		<property name="DamageBonus.head" value="4"/>
+		<property name="ActionExp" value="4"/>
+		<property name="ActionExpBonusMultiplier" value="10"/>
+		<property name="ToolCategory.Butcher" value="0" param1="10"/>
+	</property>
+	<property class="Attributes">
+		<property name="EntityDamage" value="15,33"/>
+		<property name="BlockDamage" value="5,15"/>
+		<property name="DegradationMax" value="150,500"/>
+		<property name="DegradationRate" value="3,1"/>
+		<property name="DismembermentBaseChance" value="-0.1,0.05"/>
+	</property>
+	<property name="CritChance" value="0.15"/>
+	<property name="Group" value="Ammo/Weapons"/>
+	<property name="ActionSkillGroup" value="Blunt Weapons"/>
+	<property name="CraftingSkillGroup" value="craftSkillBluntWeapons"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
+</item>
