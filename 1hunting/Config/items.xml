@@ -1,0 +1,84 @@
+<config>
+<append xpath="/items/item[@name='gunHuntingRifle']/property[@name='Tags']/@value">,magazine</append>
+<append xpath="/items/item[@name='gunCompoundBow']/property [@class='Action0']/property[@name='Magazine_items']/@value">,ammoArrowExploding</append>
+<append xpath="/items/item[@name='gunCrossbow']/property [@class='Action0']/property[@name='Magazine_items']/@value">,ammoCrossbowBoltFlaming</append>
+
+
+<remove xpath="/items/item/effect_group[@name='Power Attack']/triggered_effect[@action='PlaySound']" />
+
+	<append xpath="/items">
+		<item name="ammoArrowExploding">
+			<property name="CustomIcon" value="ExplodingArrow" />
+			<property name="Extends" value="ammoArrowIron"/>
+			<property name="Meshfile" value="Items/Weapons/Ranged/Bows/WoodenBow/bodkinArrowPrefab"/>
+			<property name="HoldType" value="45"/>
+			<property name="HandMeshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="StickyMeshFile" value="Items/Weapons/Ranged/Bows/WoodenBow/flamingArrowPrefab"/>
+			<property name="UsableUnderwater" value="false"/>
+			<property name="FuelValue" value="27"/>
+			<property name="EconomicValue" value="44"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Damage_type" value="Heat"/>
+			<property name="StickyOffset" value="0.7"/>			
+			<property class="Action1">
+				<property name="Explosion.ParticleIndex" value="0"/> <!-- no expl. -->
+				<property name="Gravity" value="-5"/>
+				<property name="Explosion.BlockDamage" value="10"/>
+				<property name="Explosion.EntityDamage" value="80"/>
+				<property name="Explosion.ParticleIndex" value="1"/>
+				<property name="Explosion.RadiusBlocks" value="3"/>
+				<property name="Explosion.RadiusEntities" value="4"/>
+				<property name="Explosion.DamageBonus.stone" value="0.3"/>
+				<property name="Explosion.DamageBonus.metal" value="0.1"/>
+				<property name="Explosion.DamageBonus.earth" value="0"/> <!-- should work? -->
+				<property name="Explosion.DamageBonus.wood" value="0.5"/>
+				<property name="Explosion.DamageBonus.water" value="0"/>
+			</property>	
+
+			<effect_group name="Base Effects" tiered="false"> <!-- ammoCrossbowBoltExploding -->
+				<passive_effect name="EntityDamage" operation="base_set" value="30"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="6"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0.1" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,water"/>
+					<!-- do we have damage modifiers for explosions? -->
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="45"/>
+				<passive_effect name="ProjectileStickChance" operation="perc_set" value="0"/>
+				<display_value name="ExRadius" value="4" />
+			</effect_group>
+		</item>
+
+		<item name="ammoCrossbowBoltFlaming">
+			<property name="CustomIcon" value="FlamingCrossbowBolt" />
+			<property name="Extends" value="ammoCrossbowBoltIron"/>
+			<property name="DisplayType" value="ammoArrowExploding"/>
+			<property name="Meshfile" value="Items/Weapons/Ranged/Bows/WoodenBow/flamingArrowPrefab"/>
+			<property name="HoldType" value="45"/>
+			<property name="HandMeshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="IsSticky" value="false"/>
+			<property name="FuelValue" value="27"/>
+			<property name="EconomicValue" value="80"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="CraftingSkillGroup" value="craftSkillScience"/>					
+			<property class="Action1">
+				<property name="Gravity" value="-5"/>
+				<property name="DamageBonus.wood" value="2"/>
+				<property name="Buff" value="buffBurningFlamingArrow"/>
+			</property>
+			<effect_group name="Base Effects" tiered="false"> <!-- ammoArrowFlaming -->
+				<passive_effect name="EntityDamage" operation="base_set" value="28"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="6"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0.1" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth"/>
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="40"/>
+				<passive_effect name="ProjectileStickChance" operation="perc_set" value="0"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="buffBurningFlamingArrow"/>
+			</effect_group>
+		</item>
+
+	</append>
+
+
+</config>
