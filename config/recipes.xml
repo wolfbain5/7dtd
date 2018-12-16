@@ -1,0 +1,17 @@
+<configs>
+<append xpath="/recipes">
+
+	<recipe name="treeBirdnest" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceYuccaFibers" count="20"/>
+		<ingredient name="treePlantedMountainPine1m" count="2"/>
+		<ingredient name="resourceClayLump" count="2"/>
+	</recipe>
+
+	<recipe name="treeBirdnest" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceYuccaFibers" count="20"/>
+		<ingredient name="treePlantedOak1m" count="2"/>
+		<ingredient name="resourceClayLump" count="2"/>
+	</recipe>
+
+	</append>
+</configs>

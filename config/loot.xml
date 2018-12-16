@@ -1,0 +1,11 @@
+<configs>
+
+    <append xpath="/lootcontainers">
+    <!-- Lootcontainer 145 Birds Nest Tree -->
+        <lootcontainer id="145" count="1" size="4,3" destroy_on_close="true" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="baseTemplate">
+            <item name="foodEgg" count="1,4" prob="0.3" />
+            <item name="resourceFeather" count="5,40" prob="0.75" />
+        </lootcontainer>
+    </append>
+
+</configs>
