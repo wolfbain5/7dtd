@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="bird nest" />
+		<Description value="adds birdnests to living off the land perk" />
+		<Author value="wolfbain5" />
+		<Version value="1.0.0" />
+	</ModInfo>
+</xml>

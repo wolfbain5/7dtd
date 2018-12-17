@@ -1,0 +1,60 @@
+<configs>
+	<append xpath="/items">
+
+		<item name="LeadPenny">
+			<property name="CustomIcon" value="LeadPenny" />
+			<property name="Extends" value="casinoCoin" />
+			<property name="Material" value="Mlead_scrap" />
+			<property name="Weight" value="1" />
+		</item>
+
+		<item name="BrassPenny">
+			<property name="CustomIcon" value="BrassPenny" />
+			<property name="Extends" value="casinoCoin" />
+			<property name="Material" value="Mbrass_scrap" />
+			<property name="Weight" value="1" />
+		</item>
+
+		<item name="IronPenny">
+			<property name="CustomIcon" value="IronPenny" />
+			<property name="Extends" value="casinoCoin" />
+			<property name="Material" value="Miron_scrap" />
+			<property name="Weight" value="1" />
+		</item>
+
+		<item name="icedcoffee">
+			<property name="CustomIcon" value="icedcoffee"/>
+			<property name="HoldType" value="3"/>
+			<property name="DisplayType" value="waterCoffee"/>
+			<property name="Meshfile" value="Items/Food/bottled_waterPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="10"/>
+			<property name="Stacknumber" value="15"/> <!-- STK drink -->
+			<property name="EconomicValue" value="100"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_drinking"/>
+				<property name="Create_item" value="drinkJarEmpty"/>
+			</property>
+			<property name="Group" value="Food/Cooking"/>
+			<effect_group tiered="false">
+				<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmount" operation="add" value="24"/>
+				<display_value name="staminaAmount" value=".35" />
+				<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterPerkDisplay" operation="add" value="@waterHydrationPSec"/> -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables,buffCoffee"/>
+				<display_value name="dIntellect" value="1"/>
+				<display_value name="dHypothermalResist" value="5"/>
+			</effect_group>
+
+			<effect_group tiered="false">
+				<requirement name="HasBuff" buff="buffIsOnFire"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffExtinguishFire"/>
+			</effect_group>
+		</item>
+
+	</append>
+</configs>
