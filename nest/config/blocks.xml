@@ -34,25 +34,4 @@
 			<property name="Group" value="Resources"/>
 		</block>
 
-		<!-- WOTW Mod -->
-		<block name="treeBirdnestLoot">
-			<property name="CustomIcon" value="cntBirdnest"/>
-			<property name="Class" value="Loot"/>
-			<property name="MaxDamage" value="50"/>
-			<property name="Material" value="MtreeWoodSmall"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="Entities/Trees/Prefabs/Stump"/>
-			<property name="ModelOffset" value="0,-0.2,0"/>
-			<property name="StabilitySupport" value="true"/>
-			<property name="FallOver" value="false"/>
-			<property name="OnlySimpleRotations" value="true"/>
-			<property name="IsTerrainDecoration" value="true"/>
-			<property name="IsDecoration" value="true"/>
-			<property name="CanDecorateOnSlopes" value="true"/>
-			<property name="LootList" value="145"/>
-			<property name="Collide" value="melee,bullet,arrow,rocket"/>
-			<property name="DowngradeBlock" value="treeBirdnest"/>
-			<drop event="Destroy" count="0"/>
-		</block>
-	</append>
-</configs>
+		
