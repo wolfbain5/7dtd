@@ -13,34 +13,5 @@
 		<ingredient name="resourceClayLump" count="2"/>
 	</recipe>
 
-	<recipe name="resourceOilShale" count="10" craft_area="chemistryStation">
-		<ingredient name="resourceWood" count="50"/>
-	</recipe>
-
-	<recipe name="resourceOilShale" count="10" craft_area="chemistryStation">
-		<ingredient name="resourceCoal" count="20"/>
-	</recipe>
-
-<!--
-	<recipe name="fruittea" count="1" craft_area="campfire" craft_tool="cookingPot">
-		<ingredient name="resourceCropCoffeeBeans" count="1"/>
-		<ingredient name="foodCropBlueberries" count="1"/>
-		<ingredient name="drinkJarBoiledWater" count="1"/>
-	</recipe>
-	
-	-->
-	
-	<recipe name="icedcoffee" count="1" craft_area="campfire" craft_tool="cookingPot">
-    <ingredient name="drinkJarCoffee" count="1"/>
-    <ingredient name="resourceSnowBall" count="1"/>
-	</recipe>
-
-
-	<!-- 
-	<recipe name="blueberryJuice" count="1" craft_area="campfire" craft_tool="cookingPot">
-		<ingredient name="foodCropBlueberries" count="5"/>
-		<ingredient name="drinkJarBoiledWater" count="1"/>
-	</recipe> 
-	-->
 	</append>
 </configs>
