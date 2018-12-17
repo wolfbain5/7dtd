@@ -1,6 +1,5 @@
 <configs>
 	<append xpath="/blocks">
-		<!-- WOTW Mod -->
 		<block name="treeBirdnest">
 			<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon,DescriptionKey,Shape,Mesh,Texture"/>
 			<property name="CustomIcon" value="cntBirdnest"/>
@@ -34,7 +33,6 @@
 			<property name="Group" value="Resources"/>
 		</block>
 
-		<!-- WOTW Mod -->
 		<block name="treeBirdnestLoot">
 			<property name="CustomIcon" value="cntBirdnest"/>
 			<property name="Class" value="Loot"/>
