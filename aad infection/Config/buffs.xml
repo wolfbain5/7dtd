@@ -5,8 +5,9 @@
 	<set xpath="/buffs/buff[@name='buffIllInfection3']/effect_group/passive_effect[@name='StaminaChangeOT']/@value">4</set>
 	<set xpath="/buffs/buff[@name='buffIllInfection3']/effect_group/passive_effect[@name='StaminaLoss']/@value">0.6</set>
 	<set xpath="/buffs/buff[@name='buffIllInfection3']/effect_group/passive_effect[@name='StaminaMax']/@value">60</set>
+	<set xpath="/buffs/buff[@name='buffCoffee']/duration/@value">300</set>
 	
-		<!--stamina drain ranged assisted by Haidr'Gna --> 
+	<!--stamina drain ranged assisted by Haidr'Gna --> 
 	<set xpath="/buffs/buff[@name='buffHoldBreathAiming1']/effect_group">
             <triggered_effect trigger="onSelfDied" action="RemoveBuff" target="self" buff="buffHoldBreathAiming1"/>
             <triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" target="self" buff="buffHoldBreathAiming1"/>
@@ -22,4 +23,7 @@
             <passive_effect name="WeaponHandling" operation="perc_add" value="-.45"/>
 </set>
 	
+
 </config>
+
+	
