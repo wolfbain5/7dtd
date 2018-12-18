@@ -28,7 +28,7 @@
 			<property name="SortOrder1" value="70g0"/>
 		</block>
 		
-		<block name="TripWireSheet">
+		<block name="greasedWireSheet">
 			<property name="CustomIcon" value="barbedWireSheet"/>
 			<property name="CustomIconTint" value="bfc1c2"/>
 			<property name="Overlay0Tint" value="202,204,206"/>
