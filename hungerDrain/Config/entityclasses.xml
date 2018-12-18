@@ -8,11 +8,8 @@ current build
 		<passive_effect name="StaminaLossMaxMult" operation="base_set" value="0.011"/> 
 -->
 		
-<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group">
-
-		<passive_effect name="StaminaLossMaxMult" operation="base_set" value="0.0054"/> <!-- regening stamina costs food, blacks out the stamina bar -->
+<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/<passive_effect [@name='StaminaLossMaxMult]/@value='0.0054'</set>
 		
-		</set>
 	
 
 </config>
