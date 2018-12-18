@@ -6,7 +6,7 @@
 	<ingredient name="resourceCoal" count="15"/>
 </recipe>
 
-<recipe name="greasedbarbedWireSheet" count="1"> <!-- trap -->
+<recipe name="greasedWireSheet" count="1"> <!-- trap -->
 	<ingredient name="resourceScrapIron" count="15"/>
 	<ingredient name="resourceAnimalFat" count="10"/>
 </recipe>
