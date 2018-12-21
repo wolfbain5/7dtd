@@ -1,0 +1,29 @@
+<config>
+
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='industrialGroup']/prefab[@rule='industrial_Bldgs']/@max_count">7</set>
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='industrialGroup']/prefab[@rule='industrial_JunkyardsLots']/@max_count">6</set>
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='industrialGroup']/prefab[@rule='industrial_MpWasteBldgs']/@max_count">6</set>
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='business_strip_old_01']/@max_count">4</set>
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='business_strip_old_02']/@max_count">4</set>
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='business_strip_old_03']/@max_count">4</set>
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='business_strip_old_04']/@max_count">4</set>
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='hotel_roadside_01']/@max_count">4</set>
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='hotel_roadside_02']/@max_count">4</set>
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='courthouse_med_01']/@max_count">4</set>
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='courthouse_med_02']/@max_count">4</set>
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='post_office_sm_01']/@max_count">4</set>
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='post_office_med_01']/@max_count">4</set>
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='police_station1']/@max_count">4</set>	
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='store_pawn_01']/@max_count">4</set>		
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='theater_01']/@max_count">4</set>	
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='fire_station_01']/@max_count">4</set>	
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='fire_station_01']/@max_count">4</set>
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='residentialNewGroup']/prefab[@rule='residentialNew_ServBldgs']/@max_count">4</set>
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='residentialNewGroup']/prefab[@rule='residentialNew_Apts']/@max_count">4</set>	
+	
+	<append xpath="/rwgmixer/prefab_rules/prefab_rule[@name='industrialGroup']">
+		<prefab rule="diner_FastfoodGroup" max_count="6"/> 
+	</append>
+</config>
+	
+
