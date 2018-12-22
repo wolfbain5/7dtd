@@ -1,8 +1,9 @@
 <config>
-
+<!--
 	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='industrialGroup']/prefab[@rule='industrial_Bldgs']/@max_count">7</set>
 	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='industrialGroup']/prefab[@rule='industrial_JunkyardsLots']/@max_count">6</set>
-	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='industrialGroup']/prefab[@rule='industrial_MpWasteBldgs']/@max_count">6</set>
+-->
+ 	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='industrialGroup']/prefab[@rule='industrial_MpWasteBldgs']/@max_count">6</set>
 	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='business_strip_old_01']/@max_count">4</set>
 	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='business_strip_old_02']/@max_count">4</set>
 	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='downtownGroup']/prefab[@name='business_strip_old_03']/@max_count">4</set>
