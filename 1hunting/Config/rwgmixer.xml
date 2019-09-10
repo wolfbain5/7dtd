@@ -1,0 +1,21 @@
+<configs>
+
+<append xpath="/rwgmixer/prefab_rules/prefab_rule[@name='W_POIs_superrare']" >
+    <prefab name="Sly_Ship" max_count="1" />
+</append>
+
+<set xpath="/rwgmixer/biome_generators/biome_generator[@name='vanillaSmall']/module[@name='biomeOutput']">
+                <property name="sourceModule" value="clampOutput"/>
+                <property name="biomemap0.Name" value="pine_forest"/>
+                <property name="biomemap0.Range" value="0.1,0.5"/>
+                <property name="biomemap1.Name" value="snow"/>
+                <property name="biomemap1.Range" value="0,0.1"/>
+                <property name="biomemap2.Name" value="wasteland"/>
+                <property name="biomemap2.Range" value="0.5,0.6"/>
+                <property name="biomemap3.Name" value="burnt_forest"/>
+                <property name="biomemap3.Range" value="0.6,0.7"/>
+                <property name="biomemap4.Name" value="desert"/>
+                <property name="biomemap4.Range" value="0.7,1.1"/>
+</set>
+</configs>
+
